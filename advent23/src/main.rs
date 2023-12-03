@@ -1,6 +1,6 @@
 mod calendar;
-use calendar::day1::task1;
-use calendar::day1::task2;
+use calendar::day02::task1;
+use calendar::day02::task2;
 
 fn main() {
     task1();
