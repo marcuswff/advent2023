@@ -1,8 +1,7 @@
-use super::utils::read_file;    
+use super::utils::read_file;
 use std::collections::HashMap;
 
 const PATH: &str = "/Users/marcus/git/advent2023/advent23/src/data/input01.txt";
-// const PATH: &str = "/Users/marcus/git/advent2023/advent23/src/data/test/input01.txt";
 
 pub fn task1() {
     let data = read_file(PATH);
