@@ -80,7 +80,6 @@ fn game_is_possible(game: &Game, max_cubes: &HashMap<CubeType, usize>) -> bool {
 }
 
 fn create_game(game_string: &str) -> Game {
-
     let collection = game_string.split(":").collect::<Vec<&str>>();
     let id: usize = collection[0]
         .split_whitespace()
@@ -96,7 +95,6 @@ fn create_game(game_string: &str) -> Game {
         id: id as usize, 
         round: round
     }
-
 }
 
 fn get_rounds(round_string: &str) -> Vec<Vec<Cube>> {
@@ -109,10 +107,8 @@ fn get_rounds(round_string: &str) -> Vec<Vec<Cube>> {
             .collect::<Vec<&str>>()
             .iter()
             .map(|i| get_cube(i))
-            .collect::<Vec<Cube>>()
-        )
+            .collect::<Vec<Cube>>())
         .collect::<Vec<Vec<Cube>>>()
-
 }
 
 fn get_cube(cube_string: &str) -> Cube {
