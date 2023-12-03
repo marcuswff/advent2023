@@ -44,11 +44,9 @@ fn task2() {
     }
 
 fn replace_string(mut input_string: String, lookup: &HashMap<String, String>) -> String {
-
     for (k, v) in lookup {
         input_string = input_string.replace(k, format!("{k}{v}{k}").as_str())
     }
-
     input_string
 }
  
@@ -57,6 +55,7 @@ fn get_letter_to_number_lookup() -> HashMap<String, String> {
         .iter()
         .map(|s| s.to_string())
         .collect();
+    
     let digits: Vec<String> = (1..=9).into_iter().map(|i| i.to_string()).collect();
 
     letters
