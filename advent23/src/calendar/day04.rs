@@ -32,8 +32,7 @@ pub fn task2() {
         .map(|s| str_to_cards(&s.as_str()))
         .collect::<Vec<CardGame>>();
 
-    let mut map: HashMap<usize, usize>  = HashMap::from([]);
-
+    let mut map: HashMap<usize, usize> = HashMap::from([]);
     let mut card_count = 0;
 
     for game in vec {
@@ -44,7 +43,6 @@ pub fn task2() {
         for i in (game.id+1)..(game.id + number_of_wins+1) {
             *map.entry(i).or_insert(0) += 1 as usize + map.get(&game.id).unwrap();
         }   
-
         card_count += 1 + map.get(&game.id).unwrap();
     }
 
